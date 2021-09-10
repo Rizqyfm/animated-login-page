@@ -168,17 +168,17 @@ input[type="radio"]{
 }
 
 /* --------SIGN IN LINK-------- */
-.signup .signin-link {
+.signin .signin-link {
     text-align: center;
     padding-top: 20px;
 }
 
-.signup .signin-link a {
+.signin .signin-link a {
     text-decoration: none;
     color: #345995;
 }
 
-.signup .signin-link a:hover {
+.signin .signin-link a:hover {
     color: black;
     text-decoration: underline;
 }
@@ -193,4 +193,16 @@ form .field input[type="submit"] {
     border: none;
     background-color: #345995;
     color: white;
+}
+
+/* --------ON PHONE-------- */
+@media screen and (max-width:600px) {
+    .wrapper {
+        max-width: 320px;
+        max-height: 600px;
+    }
+
+    .wrapper {
+        border:1px solid black;
+    }
 }

@@ -10,21 +10,28 @@
 html,body {
     display: grid;
     height: 100%;
-    place-content: center;
+    width: 100%;
+    place-items: center;
+}
+
+body{
+    background-color: #FFFFFF;
 }
 
 .wrapper {
-    /* max-width: 400px; */
-    width: 500px;
-    background-color: #BAD7F2;
+    max-width: 390px;
+    background-color: #FFFFFF;
     border-radius: 5px;
     padding: 30px;
-    box-shadow: 0px 15px 20px;
+    border: 1px solid #345995 ;
+    overflow: hidden
 }
+
 
 .wrapper .title-text {
     display: flex;
     width: 200%;
+    color: #345995; 
 }
 
 .wrapper .title-text .title {
@@ -32,14 +39,79 @@ html,body {
     font-size: 35px;
     font-weight: 600;
     text-align: center;
+    transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
 }
 
 .wrapper .form-container {
     width: 100%;
+    overflow: hidden;
+}
+
+.form-container .slide-controls {
+    position: relative;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
+    justify-content: space-between;
+    margin: 30px 0 10px 0;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+.slide-controls .slide {
+    height: 100%;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    line-height: 45px;
+    z-index: 1;
+    color: white;
+    transition: all 0.6s ease;
+}
+
+.slide-controls .signup {
+    color:black;
+}
+
+.slide-controls .slide-tab {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    left: 0;
+    z-index: 0;
+    background-color: #345995;
+    border-radius: 5px;
+    transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+#signup:checked ~ .slide-tab {
+    left: 50%;
+}
+
+#signup:checked ~ .signup {
+    color: white;
+}
+
+#signup:checked ~ .login {
+    color: black;
+}
+
+.form-container .form-inner {
+    display: flex;
+    width: 200%;
 }
 
 .form-container .form-inner form {
-
+    width: 50%;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
 }
 
 .form-inner form .field {
@@ -55,24 +127,70 @@ html,body {
     outline: none;
     font-size: 15px;
     border-radius: 5px;
-    border: 1px solid white;
+    border: 1px solid lightgray;
     border-bottom-width: 2px;
+    transition: all 0.4s ease;
 }
 
+.form-inner form .field input:focus {
+    border-color: #345995;
+}
+
+/* --------FORGOT PASS LINK-------- */
 .form-inner .forgot-pass a {
     text-decoration: none;
+    color: #345995;
+}
+
+.form-inner .forgot-pass a:hover {
     color: black;
+    text-decoration: underline
 }
 
 .form-inner .forgot-pass {
     margin-top: 10px;
 }
 
-.form-inner .signup-link a {
-    text-decoration: none;
-    color: white;
+/* --------SIGN UP LINK-------- */
+.form-inner .signup-link {
+    text-align: center;
+    padding-top: 30px;
 }
 
-.form-inner .signup-link {
-    margin-top: 10px;
+.form-inner .signup-link a {
+    text-decoration: none;
+    color: #345995;
+}
+
+.form-inner .signup-link a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+/* --------SIGN IN LINK-------- */
+.signup .signin-link {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.signup .signin-link a {
+    text-decoration: none;
+    color: #345995;
+}
+
+.signup .signin-link a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+
+/* --------LOGIN BUTTON-------- */
+form .field input[type="submit"] {
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+    padding-left: 0;
+    border: none;
+    background-color: #345995;
+    color: white;
 }

@@ -183,6 +183,11 @@ input[type="radio"]{
     text-decoration: underline;
 }
 
+.watermark {
+    text-align: center;
+    font-weight: 700;
+    padding-top: 20px;
+}
 
 /* --------LOGIN BUTTON-------- */
 form .field input[type="submit"] {

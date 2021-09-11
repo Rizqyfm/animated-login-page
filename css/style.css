@@ -15,7 +15,7 @@ html,body {
 }
 
 body{
-    background-color: #FFFFFF;
+    background-color: #345995;
 }
 
 .wrapper {
@@ -23,10 +23,17 @@ body{
     background-color: #FFFFFF;
     border-radius: 5px;
     padding: 30px;
-    border: 1px solid #345995 ;
+    border: 1px solid #345995;
     overflow: hidden
 }
 
+img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    display: block;
+    padding-bottom: 20px;
+}
 
 .wrapper .title-text {
     display: flex;
